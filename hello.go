@@ -1,14 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-const englishHelloPrefix = "Hello, "
+	"skylark.com/greetings"
+)
+
+const englishHelloPrefix string = "Hello, "
+
 func Hello(name string) string {
-	if name =="" {
+	if name == "" {
 		name = "World!"
 	}
 	return englishHelloPrefix + name
 }
-func main(){
+func main() {
 	fmt.Println(Hello("Cedric"))
+
+	// Get a greeting message and print it.
+	message := greetings.Hello("Moira")
+	fmt.Println(message)
 }
